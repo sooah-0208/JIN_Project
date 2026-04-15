@@ -12,19 +12,19 @@ jobs:
       - name: Check PowerShell
         run: $PSVersionTable
 
-      # - name: Checkout repository
-      #   uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # - name: Check Node.js version
-      #   run: node -v
+      - name: Check Node.js version
+        run: node -v
 
-      # - name: npm install
-      #   working-directory: ./frontend
-      #   run: npm i
+      - name: npm install
+        working-directory: ./frontend
+        run: npm i
 
-      # - name: npm build
-      #   working-directory: ./frontend
-      #   run: npm run build
+      - name: npm build
+        working-directory: ./frontend
+        run: npm run build
       
-      # - name: nginx
-      #   run: docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html --name web nginx:1.28
+      - name: nginx
+        run: docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html --name web nginx:1.28
